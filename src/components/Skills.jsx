@@ -2,17 +2,17 @@ const skillCategories = [
   {
     title: 'languages',
     icon: 'terminal',
-    items: ['Java', 'Python', 'JavaScript', 'SQL', 'Go'],
+    items: ['Java', 'JavaScript', 'SQL', 'Go' , "Rust"],
   },
   {
-    title: 'databases_&_devops',
+    title: 'backend_&_devops',
     icon: 'database',
-    items: ['MySQL', 'PostgreSQL', 'Docker', 'Git', 'Oracle', 'CI/CD'],
+    items: ['MySQL', 'Azure', 'Docker', 'Git', 'Spring Boot', 'CI/CD'],
   },
   {
     title: 'frontend',
     icon: 'web',
-    items: ['HTML', 'CSS', 'React', 'Tailwind CSS'],
+    items: ['HTML', 'CSS', 'React', 'Tailwind CSS' ,'Typescript'],
   },
 ];
 
