@@ -2,12 +2,12 @@ const skillCategories = [
   {
     title: 'languages',
     icon: 'terminal',
-    items: ['Java', 'Python', 'JavaScript', 'SQL', 'Bash'],
+    items: ['Java', 'Python', 'JavaScript', 'SQL', 'Go'],
   },
   {
     title: 'databases_&_devops',
     icon: 'database',
-    items: ['MySQL', 'PostgreSQL', 'Docker', 'Git', 'Linux', 'CI/CD'],
+    items: ['MySQL', 'PostgreSQL', 'Docker', 'Git', 'Oracle', 'CI/CD'],
   },
   {
     title: 'frontend',
