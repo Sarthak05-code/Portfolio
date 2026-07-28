@@ -12,13 +12,20 @@ export default function Education() {
                 school
               </span>
             </div>
+
             <div className="flex-1">
               <h3 className="font-mono text-lg font-semibold text-on-surface mb-1">
                 Bachelor of Computer Applications
               </h3>
+
               <p className="font-mono text-sm text-primary-container mb-1">
+                Kathford International College of Engineering and Management
+              </p>
+
+              <p className="font-mono text-sm text-outline mb-1">
                 BCA — 2nd Year
               </p>
+
               <p className="text-sm text-outline mb-md">
                 Expected Graduation: 2027
               </p>
@@ -28,10 +35,10 @@ export default function Education() {
                 <p className="font-mono text-xs text-outline mb-sm uppercase tracking-wider">
                   relevant_coursework:
                 </p>
+
                 <div className="flex flex-wrap gap-1.5">
                   {[
-                    'Data Structures',
-                    'Algorithms',
+                    'Data Structures & Algorithms',
                     'Database Systems',
                     'Operating Systems',
                     'Computer Networks',
