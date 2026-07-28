@@ -22,7 +22,7 @@ export default function Navbar() {
         >
           <span className="text-outline">→</span>{' '}
           sarthak_thapa@dev:~$
-          <span className="ml-1 inline-block h-4 w-[2px] bg-primary-container animate-blink align-middle" />
+          <span className="ml-1 inline-block h-4 w-0.5 bg-primary-container animate-blink align-middle" />
         </a>
 
         {/* Desktop nav */}
