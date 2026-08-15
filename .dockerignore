@@ -2,3 +2,8 @@ node_modules
 dist
 .git
 .gitignore
+.env
+.env.local
+.astro
+.DS_Store
+*.log
