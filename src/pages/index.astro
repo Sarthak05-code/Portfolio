@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import BackgroundGrid from "../components/BackgroundGrid.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Education from "../components/Education.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sarthak — Backend Developer & DevOps Enthusiast</title>
+
+    <meta
+      name="description"
+      content="Sarthak Thapa — Backend Developer and DevOps enthusiast building reliable systems and exploring infrastructure."
+    />
+  </head>
+
+  <body>
+    <BackgroundGrid />
+    <Navbar />
+
+    <main>
+      <Hero />
+      <Projects />
+      <About />
+      <Skills />
+      <Education />
+      <Contact />
+      <Footer />
+    </main>
+  </body>
+</html>

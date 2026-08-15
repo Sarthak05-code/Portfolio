@@ -1,0 +1,116 @@
+---
+const projects = [
+  {
+    number: "01",
+    title: "Database Backup CLI",
+    description:
+      "A Go-based backup and recovery tool for MySQL and MariaDB, supporting automated backups, restoration, compression, and operational management.",
+    tags: ["Go", "MySQL", "MariaDB", "Bash"],
+    github: "https://github.com/Sarthak05-code/databaseRecovery-app",
+    image: null,
+  },
+  {
+    number: "02",
+    title: "Hostel Management System",
+    description:
+      "A full-stack hostel administration platform built with Spring Boot and MySQL, using layered architecture to manage hostel operations and data.",
+    tags: ["Java", "Spring Boot", "MySQL", "Thymeleaf", "Tailwind"],
+    github: "https://github.com/Sarthak05-code/Hostel-Management-System",
+    image: null,
+  },
+  {
+    number: "03",
+    title: "Freelance Bidding System",
+    description:
+      "A lightweight freelance marketplace where clients post tasks and freelancers submit bids, with automated bid management and separate client and admin workflows.",
+    tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Sarthak05-code/Freelance---BiddingSystem",
+    image: null,
+  },
+];
+---
+
+<section id="work" class="border-t border-[var(--border)] py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+
+    <!-- Section heading -->
+    <div class="mb-16 flex items-end justify-between gap-6">
+      <div>
+        <p
+          class="mb-4 text-sm uppercase tracking-[0.3em] text-[var(--text-muted)]"
+        >
+          01 / Selected Work
+        </p>
+
+        <h2
+          class="text-4xl font-semibold tracking-[-0.04em] md:text-6xl"
+        >
+          Things I've built.
+        </h2>
+      </div>
+
+      <span
+        class="hidden text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] md:block"
+      >
+        {projects.length} Projects
+      </span>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      {projects.map((project) => (
+        <article
+          class="group grid gap-6 border-t border-[var(--border)] py-8 transition-colors md:grid-cols-[80px_1fr_auto] md:items-start md:py-10"
+        >
+
+          <!-- Number -->
+          <span
+            class="text-sm font-medium text-[var(--text-muted)]"
+          >
+            {project.number}
+          </span>
+
+          <!-- Main content -->
+          <div class="max-w-3xl">
+
+            <h3
+              class="text-2xl font-semibold tracking-tight transition-transform duration-300 group-hover:translate-x-1 md:text-3xl"
+            >
+              {project.title}
+            </h3>
+
+            <p
+              class="mt-4 max-w-2xl text-sm leading-7 text-[var(--text-muted)] md:text-base"
+            >
+              {project.description}
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-x-4 gap-y-2">
+              {project.tags.map((tag) => (
+                <span
+                  class="text-xs uppercase tracking-[0.12em] text-[var(--text-muted)]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+          </div>
+
+          <!-- GitHub -->
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm uppercase tracking-[0.12em] transition-transform duration-300 hover:translate-x-1"
+          >
+            Source
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
