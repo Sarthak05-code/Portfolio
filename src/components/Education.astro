@@ -1,0 +1,77 @@
+---
+const coursework = [
+  "Data Structures & Algorithms",
+  "Database Systems",
+  "Operating Systems",
+  "Computer Networks",
+  "Web Development",
+  "Software Engineering",
+  "OOP with Java",
+];
+---
+
+<section id="education" class="border-t border-[var(--border)] py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+    <!-- Heading -->
+    <div class="mb-16">
+      <p
+        class="mb-4 text-sm uppercase tracking-[0.3em] text-[var(--text-muted)]"
+      >
+        04 / Education
+      </p>
+
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-6xl">
+        Academic background.
+      </h2>
+    </div>
+
+    <!-- Degree -->
+    <div
+      class="grid gap-8 border-t border-[var(--border)] py-8 md:grid-cols-[220px_1fr] md:py-10"
+    >
+      <!-- Year / Status -->
+      <div>
+        <p class="text-sm text-[var(--text-muted)]">2025 — 2027</p>
+
+        <p
+          class="mt-2 text-xs uppercase tracking-[0.15em] text-[var(--text-muted)]"
+        >
+          In progress
+        </p>
+      </div>
+
+      <!-- Degree information -->
+      <div class="max-w-3xl">
+        <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+          Bachelor of Computer Applications
+        </h3>
+
+        <p class="mt-2 text-base text-[var(--text-muted)]">
+          Kathford International College of Engineering and Management
+        </p>
+
+        <p class="mt-6 max-w-2xl text-sm leading-7 text-[var(--text-muted)]">
+          Currently pursuing a BCA with a focus on software development,
+          databases, computer systems, and application engineering.
+        </p>
+
+        <!-- Coursework -->
+        <div class="mt-8">
+          <p
+            class="mb-4 text-xs uppercase tracking-[0.18em] text-[var(--text-muted)]"
+          >
+            Relevant coursework
+          </p>
+
+          <div class="flex flex-wrap gap-x-6 gap-y-3">
+            {
+              coursework.map((course) => (
+                <span class="text-sm md:text-base">{course}</span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

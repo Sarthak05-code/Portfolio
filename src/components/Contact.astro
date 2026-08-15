@@ -1,0 +1,150 @@
+---
+const email = "ytsarthak1@gmail.com";
+---
+
+<section id="contact" class="border-t border-[var(--border)] py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+    <div class="grid gap-12 md:grid-cols-[220px_1fr] md:gap-16">
+      <!-- Section label -->
+      <div>
+        <p class="text-sm uppercase tracking-[0.3em] text-[var(--text-muted)]">
+          05 / Contact
+        </p>
+      </div>
+
+      <!-- Contact content -->
+      <div class="max-w-3xl">
+        <h2
+          class="text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl"
+        >
+          Got an idea?
+          <br />
+          I'd love to hear about it.
+        </h2>
+
+        <p
+          class="mt-8 max-w-xl text-base leading-8 text-[var(--text-muted)] md:text-lg"
+        >
+          Have a project, opportunity, or something interesting to discuss? Send
+          me a message.
+        </p>
+
+        <!-- Dummy contact form -->
+        <form id="contact-form" class="mt-12 space-y-8">
+          <!-- Name -->
+          <div>
+            <label
+              for="name"
+              class="mb-3 block text-sm text-[var(--text-muted)]"
+            >
+              Name
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="Your name"
+              class="w-full border-b border-[var(--border)] bg-transparent py-3 text-base outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--text)]"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label
+              for="email"
+              class="mb-3 block text-sm text-[var(--text-muted)]"
+            >
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="w-full border-b border-[var(--border)] bg-transparent py-3 text-base outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--text)]"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label
+              for="message"
+              class="mb-3 block text-sm text-[var(--text-muted)]"
+            >
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell me about your idea..."
+              class="w-full resize-none border-b border-[var(--border)] bg-transparent py-3 text-base outline-none placeholder:text-[var(--text-muted)] focus:border-[var(--text)]"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex items-center justify-between gap-6">
+            <p
+              id="form-status"
+              class="text-sm text-[var(--text-muted)]"
+              aria-live="polite"
+            >
+            </p>
+
+            <button
+              type="submit"
+              class="group shrink-0 border-b border-[var(--border)] pb-2 text-sm transition-colors hover:border-[var(--text)]"
+            >
+              Send message
+              <span
+                class="ml-1 inline-block transition-transform group-hover:translate-x-1"
+              >
+                ↗
+              </span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Direct email -->
+        <p class="mt-12 text-sm text-[var(--text-muted)]">
+          Prefer email?
+
+          <a
+            href={`mailto:${email}`}
+            class="ml-1 underline underline-offset-4 transition-colors hover:text-[var(--text)]"
+          >
+            {email}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector("#contact-form");
+  const status = document.querySelector("#form-status");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!(form instanceof HTMLFormElement)) return;
+    if (!(status instanceof HTMLElement)) return;
+
+    status.textContent = "Message sent.";
+
+    form.reset();
+
+    setTimeout(() => {
+      status.textContent = "";
+    }, 3000);
+  });
+</script>

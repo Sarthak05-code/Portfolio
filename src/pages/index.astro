@@ -1,6 +1,14 @@
 ---
 import "../styles/global.css";
-import BackGroundGrid from "../components/BackGroundGrid.astro";
+import BackgroundGrid from "../components/BackgroundGrid.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Education from "../components/Education.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -8,30 +16,27 @@ import BackGroundGrid from "../components/BackGroundGrid.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarthak</title>
+
+    <title>Sarthak — Backend Developer & DevOps Enthusiast</title>
+
     <meta
       name="description"
-      content="Sarthak's personal portfolio - software development, experiments and selected works"
+      content="Sarthak Thapa — Backend Developer and DevOps enthusiast building reliable systems and exploring infrastructure."
     />
   </head>
+
   <body>
-    <BackGroundGrid />
+    <BackgroundGrid />
+    <Navbar />
+
     <main>
-      <section class="min-h-screen flex items-center justify-center">
-        <div class="text-center">
-          <p
-            class="mb-4 text-sm uppercase tracking-[0.25em] text-[var(--text-muted)]"
-          >
-            Portfolio / 2026
-          </p>
-          <h1 class="text-6xl font-semibold tracking-tight md:text-8xl">
-            Sarthak
-          </h1>
-          <p class="mt-6 text-lg text-[var(--text-muted)]">
-            Software Developer
-          </p>
-        </div>
-      </section>
+      <Hero />
+      <Projects />
+      <About />
+      <Skills />
+      <Education />
+      <Contact />
+      <Footer />
     </main>
   </body>
 </html>
