@@ -10,27 +10,18 @@ const links = [
     label: "Email",
     href: "mailto:ytsarthak1@gmail.com",
   },
-
-  // Add future social links here.
-  // {
-  //   label: "LinkedIn",
-  //   href: "https://linkedin.com/in/yourusername",
-  // },
 ];
 ---
 
 <footer class="border-t border-[var(--border)]">
   <div
-    class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 text-sm text-[var(--text-muted)] md:flex-row md:items-center md:justify-between md:px-10"
+    class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-8 text-sm text-[var(--text-muted)] md:flex-row md:items-center md:justify-between md:px-8"
   >
-    <!-- Identity -->
     <div>
-      <p class="text-[var(--text)]">Sarthak Thapa</p>
-
+      <p class="font-medium text-[var(--text)]">Sarthak Thapa</p>
       <p class="mt-1">Software developer</p>
     </div>
 
-    <!-- Links -->
     <nav class="flex flex-wrap gap-6">
       {
         links.map((link) => (
@@ -38,7 +29,7 @@ const links = [
             href={link.href}
             target={link.label === "Email" ? undefined : "_blank"}
             rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-            class="transition-colors hover:text-[var(--text)]"
+            class="transition-colors hover:text-[var(--accent)]"
           >
             {link.label}
             <span class="ml-1">↗</span>
@@ -47,9 +38,6 @@ const links = [
       }
     </nav>
 
-    <!-- Copyright -->
-    <p>
-      © {year} Sarthak Thapa
-    </p>
+    <p>© {year} Sarthak Thapa</p>
   </div>
 </footer>

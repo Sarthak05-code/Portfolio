@@ -1,31 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
+import Background from "../components/Background.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
 import Education from "../components/Education.astro";
-import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
-import BackGroundGrid from "../components/BackGroundGrid.astro";
 ---
 
 <BaseLayout
-    title="Sarthak — Backend Developer & DevOps Enthusiast"
-    description="Sarthak Thapa — Backend Developer and DevOps enthusiast building reliable systems and exploring infrastructure."
+  title="Sarthak — Backend Developer & DevOps Enthusiast"
+  description="Sarthak Thapa — Backend Developer and DevOps enthusiast building reliable systems and exploring infrastructure."
 >
-    <BackGroundGrid />
-    <Navbar />
+  <Background />
+  <Navbar />
 
-    <main>
-        <Hero />
-        <Projects />
-        <About />
-        <Skills />
-        <Education />
-        <Contact />
-        <Footer />
-    </main>
+  <main>
+    <Hero />
+    <Projects />
+    <About />
+    <Skills />
+    <Education />
+    <Contact />
+  </main>
+
+  <Footer />
 </BaseLayout>

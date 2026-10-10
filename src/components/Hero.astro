@@ -1,69 +1,137 @@
 ---
 import { Image } from "astro:assets";
 import profileImage from "../assets/Profile.jpeg";
-import SystemCore from "./SystemCore";
 ---
 
-<section class="relative min-h-[calc(100vh-5rem)] overflow-hidden">
-  <div
-    class="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-16 px-6 py-20 md:px-10 lg:grid-cols-[1.2fr_0.8fr]"
-  >
-    <!-- Text -->
-    <div class="relative z-10">
-      <!-- Avatar -->
-      <div
-        class="mb-8 h-20 w-20 overflow-hidden rounded-full border border-[var(--border)]"
-      >
-        <Image
-          src={profileImage}
-          alt="Sarthak"
-          width={160}
-          height={160}
-          class="h-full w-full object-cover"
-        />
-      </div>
-      <p
-        class="mb-6 text-sm uppercase tracking-[0.3em] text-[var(--text-muted)]"
-      >
-        Software Developer / 2026
-      </p>
+<section class="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <!-- Left: text -->
+      <div>
+        <div class="mb-8 flex items-center gap-4">
+          <div
+            class="h-16 w-16 overflow-hidden rounded-full border-2 border-[var(--border)] ring-2 ring-[var(--accent)]/30"
+          >
+            <Image
+              src={profileImage}
+              alt="Sarthak Thapa"
+              width={128}
+              height={128}
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-xs text-[var(--text-muted)]"
+          >
+            <span
+              class="pulse-dot h-2 w-2 rounded-full bg-[var(--accent)]"
+            ></span>
+            Available for work
+          </div>
+        </div>
 
-      <h1
-        class="max-w-4xl text-[clamp(4rem,10vw,9rem)] font-semibold leading-[0.85] tracking-[-0.06em]"
-      >
-        Sarthak
-      </h1>
-
-      <h2
-        class="mt-6 max-w-2xl text-2xl font-medium tracking-tight text-[var(--text-muted)] md:text-4xl"
-      >
-        Building digital experiences, interfaces and useful systems.
-      </h2>
-
-      <a
-        href="#work"
-        class="group mt-10 inline-flex items-center gap-4 border border-[var(--border)] px-6 py-4 text-sm font-medium uppercase tracking-[0.15em] transition-colors hover:border-[var(--accent)]"
-      >
-        View work
-        <span
-          class="transition-transform duration-300 group-hover:translate-x-1"
+        <p
+          class="mb-4 text-xs font-medium uppercase tracking-[0.28em] text-[var(--secondary)]"
         >
-          →
-        </span>
-      </a>
+          Backend · DevOps · Systems
+        </p>
+
+        <h1
+          class="text-[clamp(3.25rem,9vw,6.5rem)] font-semibold leading-[0.9] tracking-[-0.05em]"
+        >
+          Sarthak
+          <span class="block text-[var(--accent)]">Thapa</span>
+        </h1>
+
+        <p
+          class="mt-6 max-w-lg text-lg leading-relaxed text-[var(--text-muted)] md:text-xl"
+        >
+          Building reliable backends, infrastructure, and digital systems —
+          from Nepal.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#work"
+            class="group inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--bg)] transition-all duration-300 hover:bg-[var(--accent-soft)] hover:shadow-[0_0_28px_-4px_rgba(255,107,26,0.55)]"
+          >
+            View work
+            <span
+              class="transition-transform duration-300 group-hover:translate-x-1"
+              >→</span
+            >
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-6 py-3 text-sm font-medium text-[var(--text)] transition-colors duration-300 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: info card (replaces sphere) -->
+      <div class="relative">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 glow-soft md:p-8"
+        >
+          <div
+            class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[var(--accent)]/10 blur-2xl"
+          >
+          </div>
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.2em] text-[var(--secondary)]"
+          >
+            Snapshot
+          </p>
+
+          <dl class="mt-6 space-y-5">
+            <div class="flex items-start justify-between gap-4 border-b border-[var(--border)] pb-4">
+              <dt class="text-sm text-[var(--text-muted)]">Role</dt>
+              <dd class="text-right text-sm font-medium">
+                Backend Developer
+              </dd>
+            </div>
+            <div class="flex items-start justify-between gap-4 border-b border-[var(--border)] pb-4">
+              <dt class="text-sm text-[var(--text-muted)]">Focus</dt>
+              <dd class="text-right text-sm font-medium">
+                Systems · DevOps
+              </dd>
+            </div>
+            <div class="flex items-start justify-between gap-4 border-b border-[var(--border)] pb-4">
+              <dt class="text-sm text-[var(--text-muted)]">Based in</dt>
+              <dd class="text-right text-sm font-medium">
+                Chobar, Nepal
+              </dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-sm text-[var(--text-muted)]">Stack</dt>
+              <dd class="text-right text-sm font-medium">
+                Java · Go · Docker
+              </dd>
+            </div>
+          </dl>
+
+          <div class="mt-8 flex flex-wrap gap-2">
+            {
+              ["Java", "Go", "Spring", "Docker", "MySQL"].map((tag) => (
+                <span class="rounded-md border border-[var(--border)] bg-[var(--bg)] px-2.5 py-1 text-xs text-[var(--text-muted)]">
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- 3D Core (replaces the static circle) -->
-    <div class="relative flex min-h-[420px] items-center justify-center">
-      <SystemCore client:load />
+    <!-- Bottom bar -->
+    <div
+      class="mt-16 flex items-center justify-between border-t border-[var(--border)] pt-5 text-[10px] uppercase tracking-[0.22em] text-[var(--text-muted)] md:text-xs"
+    >
+      <span>Developer / Student</span>
+      <span>Nepal · 2026</span>
     </div>
-  </div>
-
-  <!-- Bottom metadata -->
-  <div
-    class="mx-auto flex max-w-7xl items-center justify-between border-t border-[var(--border)] px-6 py-5 text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] md:px-10"
-  >
-    <span>Developer / Student</span>
-    <span>Nepal / 2026</span>
   </div>
 </section>
